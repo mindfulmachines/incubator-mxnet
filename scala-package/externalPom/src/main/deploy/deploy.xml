@@ -37,7 +37,7 @@
     </dependency>
     <dependency>
       <groupId>org.scala-lang.modules</groupId>
-      <artifactId>scala-parser-combinators_2.11</artifactId>
+      <artifactId>scala-parser-combinators_2.12</artifactId>
       <version>1.0.5</version>
     </dependency>
     <dependency>

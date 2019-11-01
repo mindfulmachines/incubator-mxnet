@@ -15,8 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-SCALA_VERSION_PROFILE := 2.11
-SCALA_VERSION := 2.11.8
+SCALA_VERSION_PROFILE := 2.12
+SCALA_VERSION := 2.12.8
 MXNET_VERSION := "[1.3.0-SNAPSHOT,)"
 
 MXNET_REPO = https://repository.apache.org/content/repositories/snapshots
