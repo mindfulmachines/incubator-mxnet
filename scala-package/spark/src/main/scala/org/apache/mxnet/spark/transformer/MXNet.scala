@@ -27,7 +27,7 @@ import org.apache.spark.ml.util.{MLReadable, MLReader, MLWritable, MLWriter}
 import org.apache.spark.ml.{PredictionModel, Predictor}
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.mllib.regression.LabeledPoint
-import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.{DataFrame, Dataset}
 import org.slf4j.{Logger, LoggerFactory}
 
 
@@ -40,7 +40,7 @@ class MXNet extends Predictor[Vector, MXNet, MXNetModelWrap] {
 
   override val uid = UUID.randomUUID().toString
 
-  override def train(dataset: DataFrame) : MXNetModelWrap = {
+  override def train(dataset: Dataset[_]) : MXNetModelWrap = {
     val lps = dataset.select(getFeaturesCol, getLabelCol).rdd
       .map(row => new LabeledPoint(row.getAs[Double](getLabelCol),
         row.getAs[Vector](getFeaturesCol)))
