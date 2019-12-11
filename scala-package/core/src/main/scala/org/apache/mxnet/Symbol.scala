@@ -1243,9 +1243,6 @@ object Symbol extends SymbolBase {
       symbols: Map[String, Symbol], paramKwargs: Map[String, String] = null): Symbol = {
     val function = functions(operator)
     require(function != null, s"invalid operator name $operator")
-    require(function.keyVarNumArgs == null || function.keyVarNumArgs.isEmpty,
-      s"[$operator] support variable length of Symbol arguments.\n" +
-      "Please pass all the input Symbols via positional arguments instead of keyword arguments.")
 
     val paramKeys =
       if (paramKwargs == null) Array.empty[String]
