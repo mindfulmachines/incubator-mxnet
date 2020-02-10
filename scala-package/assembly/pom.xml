@@ -51,6 +51,11 @@
       <artifactId>mxnet-infer</artifactId>
       <version>INTERNAL</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.mxnet</groupId>
+      <artifactId>mxnet-spark</artifactId>
+      <version>INTERNAL</version>
+    </dependency>
   </dependencies>
 
   <profiles>
