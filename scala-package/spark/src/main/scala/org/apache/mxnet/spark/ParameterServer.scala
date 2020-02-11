@@ -62,17 +62,17 @@ private[mxnet] object ParameterServer {
 
   private class CommandLine {
     @Option(name = "--role", usage = "PS role")
-    val role: String = null
+    var role: String = null
     @Option(name = "--root-uri", usage = "PS scheduler address")
-    val rootUri: String = null
+    var rootUri: String = null
     @Option(name = "--root-port", usage = "PS scheduler port")
-    val rootPort: Int = -1
+    var rootPort: Int = -1
     @Option(name = "--num-server", usage = "PS server number")
-    val numServer: Int = 1
+    var numServer: Int = 1
     @Option(name = "--num-worker", usage = "PS worker number")
-    val numWorker: Int = 1
+    var numWorker: Int = 1
     @Option(name = "--timeout", usage = "PS go out timeout")
-    val timeout: Int = 0
+    var timeout: Int = 0
 
     def checkArguments(): Unit = {
       require(role != null, "Undefined role")
