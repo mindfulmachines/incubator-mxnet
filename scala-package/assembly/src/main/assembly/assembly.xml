@@ -32,6 +32,7 @@
         <exclude>commons-codec:commons-codec</exclude>
         <exclude>org.slf4j:slf4j-api</exclude>
         <exclude>args4j:args4j</exclude>
+        <exclude>org.json4s:*</exclude>
       </excludes>
       <outputDirectory>.</outputDirectory>
       <useProjectArtifact>false</useProjectArtifact>
