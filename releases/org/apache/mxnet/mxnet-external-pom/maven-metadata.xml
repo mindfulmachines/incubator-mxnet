@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.apache.mxnet</groupId>
+  <artifactId>mxnet-external-pom</artifactId>
+  <versioning>
+    <versions>
+      <version>1.6.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200221135727</lastUpdated>
+  </versioning>
+</metadata>

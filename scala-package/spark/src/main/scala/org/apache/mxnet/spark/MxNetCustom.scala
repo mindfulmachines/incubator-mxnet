@@ -31,7 +31,8 @@ class MXNetCustom extends Serializable {
                                 schedulerIP: String,
                                 schedulerPort: Int,
                                 sparkContext: SparkContext,
-                                triggerOfComponent: (String, Int, SparkContext) => Unit) extends Thread {
+                                triggerOfComponent: (String, Int, SparkContext) => Unit)
+    extends Thread {
     override def run() {
       triggerOfComponent(schedulerIP, schedulerPort, sparkContext)
     }
@@ -224,7 +225,7 @@ class MXNetCustom extends Serializable {
       // give enough time for ps-lite to detect the dead nodes
       Thread.sleep(20000)
       val kv = setupKVStore(schedulerIP, schedulerPort)
-      val optimizer = new Adam(learningRate= 0.001f, clipGradient = 10.0f)
+      val optimizer = new Adam(learningRate = 0.001f, clipGradient = 10.0f)
       val model = setFeedForwardModel(optimizer, numExamples, kv, dataIter)
       logger.info("Training finished, waiting for other workers ...")
       reclaimResources(dataIter, kv)

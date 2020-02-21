@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.apache.mxnet</groupId>
+  <artifactId>mxnet-parent</artifactId>
+  <versioning>
+    <release>INTERNAL</release>
+    <versions>
+      <version>INTERNAL</version>
+    </versions>
+    <lastUpdated>20200221135534</lastUpdated>
+  </versioning>
+</metadata>
